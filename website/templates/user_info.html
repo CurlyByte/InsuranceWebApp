@@ -2,20 +2,31 @@
 {% block title %}User Information{% endblock %}
 {% block body %}
 
-<h1>User Information</h1>
-
-<h2>User: {{ current_user.name }} {{ current_user.surname }}</h2>
+<h2>User:</h2> <br/>
+<h4>{{ current_user.name }} {{ current_user.surname }}</h4>
 <p>Email: {{ current_user.email }}</p>
-<p>Phone: {{ current_user.phone }}</p>
+<p>Address: {{ current_user.address }}</p>
 <!-- Access user's insurance information -->
 <h2>Insurance Information</h2>
-{% for insurance in table.insurance %}
-    <ul>
-        <li>Insurance Name: {{ insurance.insurance_name }}</li>
-        <li>Amount: {{ insurance.amount }}</li>
-        <li>Creation Date: {{ insurance.creation_date }}</li>
-        <li>Expiration Date: {{ insurance.expiration_date }}</li>
-    </ul>
-{% endfor %}
-
+<table class="table table-bordered table-hover table-striped">
+    <thead>        
+        
+        <tr>
+            <th>Insurance Name</th>
+            <th>Amount CZK</th>
+            <th>Creation Date</th>
+            <th>Expiration Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for insurance in table.insurance %}
+        <tr>
+            <td>{{ insurance.insurance_name }}</td>
+            <td>{{ insurance.amount }}</a></td>
+            <td>{{ insurance.creation_date }}</td>
+            <td>{{ insurance.expiration_date }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock %}

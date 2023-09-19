@@ -18,7 +18,7 @@
         <div class="container">
             <!--Logo-->
           <a class="navbar-brand" 
-          href="#">CurlyByte Insurance </a>
+          href="/">CurlyByte Insurance </a>
           <!-- Toggle button-->
           <button class="navbar-toggler shadow-none border-0" 
           type="button" 
@@ -43,22 +43,23 @@
             <!---sidebar body-->
             <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
               <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
-                {% if (current_user.is_authenticated and current_user.id != 1) %}
-                
-                
-                {% elif current_user.id == "1" %}
+                {% if (current_user.is_authenticated and current_user.id == 1) %}
                 <li class="nav-item">
-                  <a class="nav-link" href="/admin">User Info</a>
+                  <a class="nav-link" href="/admin">Users Info</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/statistics_global">Statistics</a>
-                </li>
-                {% else %}
                 <li class="nav-item">
                   <a class="nav-link" href="/login">Login user</a><!--linking to @xxx.route("/login")-->
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/sign_up">New user</a>
+                    <a class="nav-link" href="/sign_up">Create user</a>
+                </li>
+                {% else %}
+            
+                <li class="nav-item">
+                  <a class="nav-link" href="/login">Login user</a><!--linking to @xxx.route("/login")-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sign_up">Create user</a>
                 </li>
                 {% endif %}
                 
