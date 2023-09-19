@@ -17,15 +17,13 @@ def create_app():
     #Importing(registering) blueprints
     from .views import views 
     from .auth import auth
-    from .homepage import homepage
     from .error_handlers import error_handlers
 
     app.register_blueprint(views, url_prefix="")
     app.register_blueprint(auth, url_prefix ="")
-    app.register_blueprint(homepage, url_prefix ="")
     app.register_blueprint(error_handlers, url_prefix="")
 
-    from .models import User, Insurance
+    from .models import User
     from .auth import login
     
     with app.app_context():

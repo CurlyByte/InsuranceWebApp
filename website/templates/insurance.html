@@ -1,16 +1,13 @@
-{% extends "base.html" %} {% block title %}Insurance creation{% endblock %} 
-{% block title %}User Insurance Relationships{% endblock %}
-{% block body %}
+{% extends "base.html" %} {% block title %}Insurance creation{% endblock %} {%
+block title %}User Insurance Relationships{% endblock %} {% block body %}
 
 <h1>User Insurance Relationships</h1>
 
 {% for user in users_with_insurances %}
-    <h2>{{ user.name }} {{ user.surname }}</h2>
-    <ul>
-        {% for insurance in user.insurance %}
-            <li>{{ insurance.insurance_name }}</li>
-        {% endfor %}
-    </ul>
-{% endfor %}
-
-{% endblock %}
+<h2>{{ user.name }} {{ user.surname }}</h2>
+<ul>
+  {% for insurance in user.insurance %}
+  <li>{{ insurance.insurance_name }}</li>
+  {% endfor %}
+</ul>
+{% endfor %} {% endblock %}

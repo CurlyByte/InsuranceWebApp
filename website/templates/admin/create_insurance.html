@@ -1,0 +1,49 @@
+{% extends "base.html" %} {% block title %}Create Insurance{% endblock %}
+{% block body %}
+<br />
+<h3>Create Insurance</h3>
+<br />
+<div class="center-container">
+  <form method="POST">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        {{ form.hidden_tag() }}
+        {{ form.insurance_name.label  }}
+        {{ form.insurance_name (class="form-control", placeholder = "Insurance name...") }}
+      </div>
+
+
+      <div class="form-group col-md-4">
+        {{ form.amount.label}}
+        {{ form.amount (class="form-control", placeholder = "Amount...")}}
+      </div>
+      <br />
+      <div class="form-group col-md-4">
+        {{ form.creation_date.label}}
+        {{ form.creation_date (class="form-control") }}
+      </div>
+
+      {% if form.creation_date.errors %}
+      <ul class="errors">
+        {% for error in form.creation_date.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <br />
+      <div class="form-group col-md-4">
+        {{ form.expiration_date.label}}
+        {{ form.expiration_date (class="form-control") }}
+      </div>
+      {% if form.expiration_date.errors %}
+      <ul class="errors">
+        {% for error in form.expiration_date.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <br />
+      {{ form.submit (class="btn btn-primary") }}
+  </form>
+</div>
+{% endblock %}

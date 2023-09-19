@@ -1,17 +1,21 @@
-{% extends "base.html" %}
-{% block title %}Home Page{% endblock %}
-{% block body %}
-<div class="container text-center">
-  <br/><br/>
-<h1>Welcome to Insurance Web App</h1>
-<p>In here you can create accounts for users and edit their data with Admin account(Updating data or creating insurances)</p>
-{% if admin_exists %}
-<br/>
-<p>Admin already created, please log in as Admin to modify Users data </p>
-{% else %}
-<a href="/admin_sign_up">Create Admin</a>
-{% endif %}
+{% extends "base.html" %} {% block title %}Home Page{% endblock %} {% block body
+%}
+<div class="container">
+  <br />
+  <h1>Welcome to Insurance Web App</h1>
+  <br />
+  <p>
+    In this web app you can create accounts for users and edit their data with
+    Admin account( updating data, editing them or creating insurances )
+  </p>
+  {% if admin_exists %}
+  <br />
+  <p>
+    Admin already created, please <a href="/admin_user">log in as Admin</a> to
+    modify Users data
+  </p>
+  {% else %}
+  <a href="/admin_sign_up">Create Admin</a>
+  {% endif %}
 </div>
 {% endblock %}
-
-   

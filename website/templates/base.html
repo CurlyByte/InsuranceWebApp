@@ -1,118 +1,120 @@
 <!DOCTYPE html>
-<html lang="cs"> 
+<html lang="cs">
 {% block head %}
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">  
-     
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}"  >        
-    <title>{% block title %}{% endblock %}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+  <title>{% block title %}{% endblock %}</title>
 </head>
 {% endblock %}
 {% block nav %}
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <!--Logo-->
-          <a class="navbar-brand" 
-          href="/">CurlyByte Insurance </a>
-          <!-- Toggle button-->
-          <button class="navbar-toggler shadow-none border-0" 
-          type="button" 
-          data-bs-toggle="offcanvas" 
-          data-bs-target="#offcanvasDarkNavbar" 
-          aria-controls="offcanvasDarkNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!---Sidebar-->
-          <div class="sidebar offcanvas offcanvas-end text-bg-dark" 
-          tabindex="-1" 
-          id="offcanvasDarkNavbar" 
-          aria-labelledby="offcanvasDarkNavbarLabel">
-       <!--Sidebar header--> 
-            <div class="offcanvas-header text-white border-bottom">
-              <h5 class="offcanvas-title" 
-              id="offcanvasDarkNavbarLabel">CurlyByte</h5>
-              <button 
-              type="button"
-              class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <!---sidebar body-->
-            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
-              <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
-                {% if (current_user.is_authenticated and current_user.id == 1) %}
-                <li class="nav-item">
-                  <a class="nav-link" href="/admin">Users Info</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/login">Login user</a><!--linking to @xxx.route("/login")-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/sign_up">Create user</a>
-                </li>
-                {% else %}
-            
-                <li class="nav-item">
-                  <a class="nav-link" href="/login">Login user</a><!--linking to @xxx.route("/login")-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/sign_up">Create user</a>
-                </li>
-                {% endif %}
-                
-                  </ul>
-                </li>
-              </ul>
-              <!--Login/signUp-->
-              
-              <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
-                {% if current_user.is_authenticated %}
-                <a href="/logout" class="text-white text-decoration-none px-3 py-0 rounded-4" >Logout</a>
-                {% else %}
-                <a href="/admin_user" class="text-white text-decoration-none px-0 py-0">Admin login</a>
-                {% endif %}
-              </div>
-            </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <!--Logo-->
+      <a class="navbar-brand" href="/">CurlyByte Insurance </a>
+      <!-- Toggle button-->
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!---Sidebar-->
+      <div class="sidebar offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <!--Sidebar header-->
+        <div class="offcanvas-header text-white border-bottom">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">CurlyByte</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <!---sidebar body-->
+        <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+          <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+            {% if (current_user.is_authenticated and current_user.id == 1) %}
+            <li class="nav-item">
+              <a class="nav-link" href="/admin">Users Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login user</a><!--linking to @xxx.route("/login")-->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/sign_up">Create user</a>
+            </li>
+
+            {% elif (current_user.is_authenticated and current_user.id != 1) %}
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a><!--linking to @xxx.route("/login")-->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/my_account">My Account</a><!--linking to @xxx.route("/login")-->
+            </li>
+
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login User</a><!--linking to @xxx.route("/login")-->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/sign_up">Create User</a>
+            </li>
+            {% endif %}
+
+          </ul>
+          </li>
+          </ul>
+          <!--Login/signUp-->
+
+          <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+            {% if current_user.is_authenticated %}
+            <a href="/logout" class="text-white text-decoration-none px-3 py-0 rounded-4">Logout</a>
+            {% else %}
+            <a href="/admin_user" class="text-white text-decoration-none px-0 py-0">Admin Login</a>
+            {% endif %}
           </div>
         </div>
-      </nav>
-      {% endblock %}
-      <!-- creating a looping from messages so it can print them if there is any flash message-->
-      {% with messages = get_flashed_messages(with_categories=true) %}
-      {% if messages %}
-        {% for category, message in messages %}
-        {% if category == 'error' %}
-        <div class="alert alert-danger alter-dismissable fade show" role="alert">
-           {{ message }}
-           <button type="button" class="close" data-dismiss="alert">
-            <span aria-hidden="true">&times;</span>
-           </button>
-        </div>
-        {% else %}
-        <div class="alert alert-success alter-dismissable fade show" role="alert">
-          {{ message }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-          </button>
-       </div>
-        {% endif %}
-        {% endfor %}
-      {% endif %}
-      {% endwith %}
-      <div class="container">
-        {% block body %}
-        {% endblock %}
       </div>
-    
-      
-{% block content %}{% endblock %}
-   
+    </div>
+  </nav>
+  {% endblock %}
+  <!-- creating a looping from messages so it can print them if there is any flash message-->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  {% for category, message in messages %}
+  {% if category == 'error' %}
+  <div class="alert alert-danger alter-dismissable fade show" role="alert">
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% else %}
+  <div class="alert alert-success alter-dismissable fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+    </button>
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+  <div class="container">
+    {% block body %}
+    {% endblock %}
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-crossorigin="anonymous"></script>  
+
+  {% block content %}{% endblock %}
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
 </body>
 
 

@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block title %}User Information{% endblock %}
 {% block body %}
-<h1>User Information</h1>
+<br />
+<h3>User Information</h3>
+<br />
 <table class="table table-bordered table-hover table-striped">
     <thead>
         <tr>
@@ -10,7 +12,7 @@
             <th>Surname</th>
             <th>Email</th>
             <th>Address</th>
-            <th>Actions</th>
+            <th class="text-center">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -22,11 +24,15 @@
             <td>{{ user.surname }}</td>
             <td>{{ user.email }}</td>
             <td>{{ user.address }}</td>
-            <td>
-                <a href="{{ url_for('views.insurance_set', id=user.id) }}" class="btn btn-outline-secondary btn-sm">Create Insurance</a>
-                <a href="{{ url_for('views.update', id=user.id) }}" class="btn btn-outline-secondary btn-sm">Update User Info</a>
-                <a href="{{ url_for('views.statistics', id=user.id) }}" class="btn btn-outline-secondary btn-sm">View User Insurance</a>
-                <a href="{{ url_for('views.delete_user', id=user.id) }}" class="btn btn-outline-secondary btn-sm">Delete User</a>
+            <td class="text-center">
+                <a href="{{ url_for('views.insurance_set', id=user.id) }}"
+                    class="btn btn-outline-primary">Create Insurance</a>
+                <a href="{{ url_for('views.update', id=user.id) }}" class="btn btn-outline-primary">Update User
+                    Info</a>
+                <a href="{{ url_for('views.statistics', id=user.id) }}" class="btn btn-outline-secondary">View
+                    User Insurance</a>
+                <a href="{{ url_for('views.delete_user', id=user.id) }}" class="btn btn-outline-danger">Delete
+                    User</a>
             </td>
         </tr>
         {% endif %}

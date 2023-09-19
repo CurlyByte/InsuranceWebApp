@@ -1,25 +1,29 @@
 {% extends "base.html" %} {% block title %}Update User{% endblock %} 
 {% block body %}
+<br/>
+<h3>Update User</h3>
 <div class="container">
+<br/>
 <form action="/update/{{update_value.id }}" method="POST">
-    <br/><br/>
-  
-    
-  <br/><br/>
+   <div class="form-row">
+    <div class="form-group col-md-4">
   {{ form.hidden_tag() }}
   {{ form.name.label  }}
-  {{ form.name(value=update_value.name) }}
-  <br/><!--creating a form to get data to register, using bootstrap div class form-group and also form-control-->
-  {{ form.surname.label(class="form-label")}}
-  {{ form.surname(value=update_value.surname)  }}
-  <br/>
-  {{ form.email.label(class="form-label")}}
-  {{ form.email (value=update_value.email)}}
-  <br/>
-  {{ form.address.label(class="form-label")}}
+  {{ form.name(class="form-control",value=update_value.name) }}
+  </div>
+  <div class="form-group col-md-4">
+  {{ form.surname.label}}
+  {{ form.surname(class="form-control",value=update_value.surname)  }}
+  </div>
+  <div class="form-group col-md-4">  
+  {{ form.email.label}}
+  {{ form.email (class="form-control",value=update_value.email)}}
+  <div class="form-group col-md-4">
+  {{ form.address.label}}
   {{ form.address(class="form-control",value=update_value.address) }}
+  </div>
   <br/>
-  {{ form.submit }}
+  {{ form.submit (class="btn btn-primary") }}
 </form>
 </div>
 {% endblock %}

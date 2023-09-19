@@ -29,24 +29,24 @@ class LogForm(FlaskForm):
 
 class SignUpForm(FlaskForm):
     name = StringField("Name", validators=[DataRequired(), Length(min=2)])
-    surname = StringField("Surname",validators=[DataRequired()])
+    surname = StringField("Surname",validators=[DataRequired(), Length(min=2)])
     email = EmailField("Email",validators=[DataRequired(), Email()])
-    password_1 = PasswordField('Password', validators=[DataRequired()])
+    password_1 = PasswordField('Password', validators=[DataRequired(), Length(min=8)])
     password_2 = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password_1')])
     address = StringField("Address", validators=[DataRequired()])
     submit = SubmitField("Create Account")
 
 class UpdateForm(FlaskForm):
-    name = StringField("Jméno", validators=[DataRequired(), Length(min=2)])
-    surname = StringField("Příjmení",validators=[DataRequired()])
+    name = StringField("Name", validators=[DataRequired(), Length(min=2)])
+    surname = StringField("Surname",validators=[DataRequired()])
     email = EmailField("Email",validators=[DataRequired(), Email()])
     address = StringField("Address", validators=[DataRequired()])
     submit = SubmitField("Update Account")
 
 class SelectInsuranceForm(FlaskForm):
-    insurance_choices = [('Car insurance'), ('House insurance'), ('Life insurance')]
+    insurance_choices = [('Car Insurance'), ('House Insurance'), ('Life Insurance')]
     insurance_name = SelectField("Insurance", choices=insurance_choices, validators=[DataRequired()])
-    amount = IntegerField("Insurance amount", validators=[DataRequired()])
+    amount = IntegerField("Insurance Amount CZK", validators=[DataRequired()])
     creation_date = DateField("Commencement date", validators=[DataRequired()])
     expiration_date = DateField("Expiration date",  validators=[DataRequired()])
     submit = SubmitField("Create Insurance")    
@@ -58,6 +58,7 @@ class SelectInsuranceForm(FlaskForm):
     def validate_expiration_date(self, field):
         if field.data <= self.creation_date.data:
             raise ValidationError('The insurance expiration date cannot be earlier than the insurance effective date.')
+        
         
 @auth.route('/admin_user', methods = ['GET','POST'])
 def admin_login():
@@ -94,7 +95,7 @@ def login():
             if check_password_hash(user.password, password):
                 flash('Logged in successfully',category='success')
                 login_user(user, remember=False)
-                return redirect(url_for('views.home'))
+                return redirect(url_for('views.home_page'))
             else:
                 flash('Incorrect password, try again', category='error')
         else:

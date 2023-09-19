@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block title %}User Information{% endblock %}
 {% block body %}
-
-<h2>User:</h2> <br/>
-<h4>{{ current_user.name }} {{ current_user.surname }}</h4>
-<p>Email: {{ current_user.email }}</p>
-<p>Address: {{ current_user.address }}</p>
+<br/>
+<div class="center-container text-center">
+<h2>User Account</h2> <br/>
+<p><strong>Name:</strong>  {{ current_user.name }} {{ current_user.surname }}</p>
+<p><strong>Email:</strong>  {{ current_user.email }}</p>
+<p><strong>Address:</strong>  {{ current_user.address }}</p>
+</div>
 <!-- Access user's insurance information -->
 <h2>Insurance Information</h2>
 <table class="table table-bordered table-hover table-striped">
@@ -13,7 +15,7 @@
         
         <tr>
             <th>Insurance Name</th>
-            <th>Amount CZK</th>
+            <th>Insurance Amount (CZK)</th>
             <th>Creation Date</th>
             <th>Expiration Date</th>
         </tr>

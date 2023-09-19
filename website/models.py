@@ -27,6 +27,8 @@ class User(db.Model, UserMixin):
     address = db.Column(db.String(100))
     date_added = db.Column(db.DateTime, default=datetime.utcnow)
     insurance = db.relationship('Insurance', secondary="insurance_user", back_populates='user')
+    def __str__(self):
+        return self.email
     """userinfo is creating a list with userinfo via relationship"""
 
 db.Table(
