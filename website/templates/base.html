@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">  
-      
+     
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}"  >        
     <title>{% block title %}{% endblock %}</title>
 </head>
@@ -43,19 +43,16 @@
             <!---sidebar body-->
             <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
               <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
-                {% if current_user.is_authenticated %}
-                <li class="nav-item">
-                  <a class="nav-link"  href="/">My Account</a>
-                </li>
-               
-                {% if current_user.id == 1 %}
+                {% if (current_user.is_authenticated and current_user.id != 1) %}
+                
+                
+                {% elif current_user.id == "1" %}
                 <li class="nav-item">
                   <a class="nav-link" href="/admin">User Info</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/statistics_global">Statistics</a>
                 </li>
-                {% endif %}
                 {% else %}
                 <li class="nav-item">
                   <a class="nav-link" href="/login">Login user</a><!--linking to @xxx.route("/login")-->
@@ -72,7 +69,7 @@
               
               <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
                 {% if current_user.is_authenticated %}
-                <a href="/logout" class="text-white text-decoration-none px-3 py-0 rounded-4" style="background-color:rgb(234, 236, 216)">Logout</a>
+                <a href="/logout" class="text-white text-decoration-none px-3 py-0 rounded-4" >Logout</a>
                 {% else %}
                 <a href="/admin_user" class="text-white text-decoration-none px-0 py-0">Admin login</a>
                 {% endif %}
@@ -82,7 +79,6 @@
         </div>
       </nav>
       {% endblock %}
-      {% block body %} {% endblock %}
       <!-- creating a looping from messages so it can print them if there is any flash message-->
       {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
@@ -97,14 +93,19 @@
         {% else %}
         <div class="alert alert-success alter-dismissable fade show" role="alert">
           {{ message }}
-          <button type="button" class="close" data-dismiss="alert">
-           <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
           </button>
        </div>
         {% endif %}
         {% endfor %}
       {% endif %}
       {% endwith %}
+      <div class="container">
+        {% block body %}
+        {% endblock %}
+      </div>
+    
+      
 {% block content %}{% endblock %}
    
 
@@ -113,7 +114,5 @@ integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgr
 crossorigin="anonymous"></script>  
 </body>
 
-    
-{% block footer %}{% endblock %}
 
 </html>

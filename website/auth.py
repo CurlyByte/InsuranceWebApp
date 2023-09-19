@@ -1,4 +1,4 @@
-from flask import Blueprint,render_template, request, flash, redirect, url_for
+from flask import Blueprint,render_template, flash, redirect, url_for
 from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
@@ -14,60 +14,50 @@ auth = Blueprint('auth', __name__)
 class AdminForm(FlaskForm):
     name = StringField("Username",validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField("Login Admin")
 
 class AdminSignUpForm(FlaskForm):
     name = StringField("Username", validators=[DataRequired(), Length(min=2)])
     password_1 = PasswordField('Password', validators=[DataRequired()])
     password_2 = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password_1')])
-    submit= SubmitField()
+    submit= SubmitField("Create Admin")
 
 class LogForm(FlaskForm):
     email = EmailField("Email",validators=[DataRequired(), Email()])
     password = PasswordField("Password",validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField("Login User")
 
 class SignUpForm(FlaskForm):
-    name = StringField("Jméno", validators=[DataRequired(), Length(min=2)])
-    surname = StringField("Příjmení",validators=[DataRequired()])
+    name = StringField("Name", validators=[DataRequired(), Length(min=2)])
+    surname = StringField("Surname",validators=[DataRequired()])
     email = EmailField("Email",validators=[DataRequired(), Email()])
-    phone = IntegerField("Phone", validators=[DataRequired()])
     password_1 = PasswordField('Password', validators=[DataRequired()])
     password_2 = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password_1')])
     address = StringField("Address", validators=[DataRequired()])
-    city = StringField("City", validators=[DataRequired()])
-    postal_code = IntegerField("Postal Code", validators=[DataRequired()])
     submit = SubmitField("Create Account")
 
 class UpdateForm(FlaskForm):
     name = StringField("Jméno", validators=[DataRequired(), Length(min=2)])
     surname = StringField("Příjmení",validators=[DataRequired()])
     email = EmailField("Email",validators=[DataRequired(), Email()])
-    phone = IntegerField("Phone", validators=[DataRequired()])
     address = StringField("Address", validators=[DataRequired()])
-    city = StringField("City", validators=[DataRequired()])
-    postal_code = IntegerField("Postal Code", validators=[DataRequired()])
-    submit = SubmitField()
-
-class InsuranceForm(FlaskForm):
-    insurance_name = StringField("Název pojištění", validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField("Update Account")
 
 class SelectInsuranceForm(FlaskForm):
-    insurance_choices = [('Pojištění vozidla'), ('Pojištění majetku')]
-    insurance_name = SelectField("Pojištění", choices=insurance_choices, validators=[DataRequired()])
-    amount = IntegerField("Částka krytí", validators=[DataRequired()])
-    creation_date = DateField("Datum vzniku pojištění", validators=[DataRequired()])
-    expiration_date = DateField("Datum konce pojištění",  validators=[DataRequired()])
-    submit = SubmitField()    
+    insurance_choices = [('Car insurance'), ('House insurance'), ('Life insurance')]
+    insurance_name = SelectField("Insurance", choices=insurance_choices, validators=[DataRequired()])
+    amount = IntegerField("Insurance amount", validators=[DataRequired()])
+    creation_date = DateField("Commencement date", validators=[DataRequired()])
+    expiration_date = DateField("Expiration date",  validators=[DataRequired()])
+    submit = SubmitField("Create Insurance")    
 
     def validate_creation_date(self, field):
         if field.data < date.today():
-            raise ValidationError('Datum vzniku pojištění nemůže být dříve než dnešní datum.')
+            raise ValidationError('The insurance effective date cannot be earlier than today\'s date.')
 
     def validate_expiration_date(self, field):
         if field.data <= self.creation_date.data:
-            raise ValidationError('Datum konce pojištění nemůže být dříve než datum vzniku pojištění.')
+            raise ValidationError('The insurance expiration date cannot be earlier than the insurance effective date.')
         
 @auth.route('/admin_user', methods = ['GET','POST'])
 def admin_login():
@@ -115,7 +105,7 @@ def login():
 @login_required # this decorator is used to prevent to see logged out for not login users
 def logout():
     logout_user()
-    return redirect(url_for('auth.login'))
+    return redirect(url_for('views.home_page'))
 
 
 
@@ -152,17 +142,14 @@ def signup():
         surname = form.surname.data
         email = form.email.data
         password = form.password_1.data
-        phone = form.phone.data
         address = form.address.data
-        city = form.city.data
-        postal_code = form.postal_code.data
 
         user = User.query.filter_by(email=email).first()
         
         if user:
             flash("Email already exists!", category='error')
         else:
-            new_user= User(name=name,surname=surname,email=email,password=generate_password_hash(password, method='sha256'),phone=phone,address=address,city=city,postal_code=postal_code)
+            new_user= User(name=name,surname=surname,email=email,password=generate_password_hash(password, method='sha256'),address=address)
             db.session.add(new_user)
             db.session.commit()
             login_user(new_user, remember=True)

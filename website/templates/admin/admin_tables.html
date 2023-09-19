@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}User Information{% endblock %}
-{% block content %}
+{% block body %}
 <h1>User Information</h1>
 <table class="table table-bordered table-hover table-striped">
     <thead>
@@ -9,9 +9,7 @@
             <th>Name</th>
             <th>Surname</th>
             <th>Email</th>
-            <th>Phone</th>
-            <th>City</th>
-            <th>Postal Code</th>
+            <th>Address</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -20,12 +18,10 @@
         {% if user.name != "admin" %}
         <tr>
             <td>{{ user.id }}</td>
-            <td><a href="{{ url_for('views.update', id=user.id) }}">{{ user.name }}</a></td>
+            <td>{{ user.name }}</a></td>
             <td>{{ user.surname }}</td>
             <td>{{ user.email }}</td>
-            <td>{{ user.phone }}</td>
-            <td>{{ user.city }}</td>
-            <td>{{ user.postal_code }}</td>
+            <td>{{ user.address }}</td>
             <td>
                 <a href="{{ url_for('views.insurance_set', id=user.id) }}" class="btn btn-outline-secondary btn-sm">Create Insurance</a>
                 <a href="{{ url_for('views.update', id=user.id) }}" class="btn btn-outline-secondary btn-sm">Update User Info</a>

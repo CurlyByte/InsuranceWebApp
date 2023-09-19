@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% block title %}Sign Up{% endblock %} 
-{% block content %}
+{% block body %}
 <br/>
 <form method="POST">
   <div class="form-row">
@@ -26,22 +26,10 @@
       {{ form.password_2.label}}
       {{ form.password_2 (class="form-control", placeholder="Confirm password...") }}
   </div>
-  <div class="form-group col-md-4">
-      {{ form.phone.label}}
-      {{ form.phone (class="form-control", placeholder="Phone number...") }}
-  </div>
   <div class="form-row">
     <div class="form-group col-md-4">
       {{ form.address.label}}
       {{ form.address (class="form-control", placeholder="Address...") }}
-    </div>
-    <div class="form-group col-md-4">
-      {{ form.city.label}}
-      {{ form.city (class="form-control", placeholder="City...") }}
-    </div>
-    <div class="form-group col-md-4">
-      {{ form.postal_code.label}}
-      {{ form.postal_code (class="form-control", placeholder="Postal code...") }}
     </div>
   </div>
   <br/>

@@ -24,10 +24,7 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(150))
     name = db.Column(db.String(150))
     surname = db.Column(db.String(150))
-    phone = db.Column(db.Integer)
     address = db.Column(db.String(100))
-    city = db.Column(db.String(100))
-    postal_code = db.Column(db.Integer)
     date_added = db.Column(db.DateTime, default=datetime.utcnow)
     insurance = db.relationship('Insurance', secondary="insurance_user", back_populates='user')
     """userinfo is creating a list with userinfo via relationship"""

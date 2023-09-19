@@ -1,34 +1,21 @@
 {% extends "base.html" %}
-{% block title %}User Insurances{% endblock %}
-{% block content %}
-<div class="container">
-    <h1>User Information</h1>
-    <p>User: {{ user.name }} {{ user.surname }}</p>
+{% block title %}User Information{% endblock %}
+{% block body %}
 
-    {% if user_insurances %}
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Insurance Name</th>
-                <th>Amount</th>
-                <th>Creation Date</th>
-                <th>Expiration Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for insurance in user_insurances %}
-            <tr>
-                <td>{{ insurance.insurance_name }}</td>
-                <td>{{ insurance.amount }}</td>
-                <td>{{ insurance.creation_date }}</td>
-                <td>{{ insurance.expiration_date }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    {% else %}
-    <p>No insurances found for this user.</p>
-    {% endif %}
-</div>
+<h1>User Information</h1>
+
+<h2>User: {{ current_user.name }} {{ current_user.surname }}</h2>
+<p>Email: {{ current_user.email }}</p>
+<p>Phone: {{ current_user.phone }}</p>
+<!-- Access user's insurance information -->
+<h2>Insurance Information</h2>
+{% for insurance in table.insurance %}
+    <ul>
+        <li>Insurance Name: {{ insurance.insurance_name }}</li>
+        <li>Amount: {{ insurance.amount }}</li>
+        <li>Creation Date: {{ insurance.creation_date }}</li>
+        <li>Expiration Date: {{ insurance.expiration_date }}</li>
+    </ul>
+{% endfor %}
+
 {% endblock %}
-
