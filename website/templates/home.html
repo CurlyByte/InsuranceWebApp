@@ -1,24 +1,108 @@
 {% extends "base.html" %}
 {% block title %}Home Page{% endblock %}
-{% block head %}
-
-{% endblock %}
 {% block body %}
 <style type="text/css">
     body {
-        background-image: url("{{ url_for('static', filename='images/landscape.jpg') }}");
+        background-image: url("{{ url_for('static', filename='images/lightning-mountain.jpg') }}");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
         color: #fff;
     }
-    
+    .blockquote {
+        font-size: larger;
+        padding: 20px;
+        margin: 20px;}
+    figure{
+        text-align: center;
+        margin: 20px;
+        margin-bottom: 20pc;
+    }
 </style>
-<blockquote class="pull-right">
-    <p>"All your life will be like a mountain for us,<br/> solid,<br/> rocky,<br/> BIG ..."<p>
-    <br/>
-    <small>CurlyByte<cite title="Source Title">Insurance</cite></small>  
-</blockquote>
+{% endblock %}        
+{% block nav %}
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+            <!--Logo-->
+          <a class="navbar-brand" 
+          href="#">CurlyByte Insurance </a>
+          <!-- Toggle button-->
+          <button class="navbar-toggler shadow-none border-0" 
+          type="button" 
+          data-bs-toggle="offcanvas" 
+          data-bs-target="#offcanvasDarkNavbar" 
+          aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!---Sidebar-->
+          <div class="sidebar offcanvas offcanvas-end text-bg-dark" 
+          tabindex="-1" 
+          id="offcanvasDarkNavbar" 
+          aria-labelledby="offcanvasDarkNavbarLabel">
+       <!--Sidebar header--> 
+            <div class="offcanvas-header text-white border-bottom">
+              <h5 class="offcanvas-title" 
+              id="offcanvasDarkNavbarLabel">CurlyByte</h5>
+              <button 
+              type="button"
+              class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <!---sidebar body-->
+            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+              <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                {% if current_user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link"  href="/">My Account</a>
+                </li>
+               
+                {% if current_user.id == 1 %}
+                <li class="nav-item">
+                  <a class="nav-link" href="/admin">User Info</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/statistics_global">Statistics</a>
+                </li>
+                {% endif %}
+                {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href="/login">Login user</a><!--linking to @xxx.route("/login")-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sign_up">New user</a>
+                </li>
+                {% endif %}
+                
+                  </ul>
+                </li>
+              </ul>
+              <!--Login/signUp-->
+              
+              <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                {% if current_user.is_authenticated %}
+                <a href="/logout" class="text-white text-decoration-none px-3 py-0 rounded-4" style="background-color:rgb(234, 236, 216)">Logout</a>
+                {% else %}
+                <a href="/admin_user" class="text-white text-decoration-none px-0 py-0">Admin login</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+{% endblock %}    
+{% block content %}
+<div class="container text-center">
+<h1>Welcome to Insurance Web App</h1>
+<p>In here you can create accounts for users</p>
+</div>
+{% endblock %}
+{% block footer %}
+<figure>
+<blockquote class="blockquote">
+    <p>"All your life will be like a mountain for us,solid, rocky, BIG ..."</p>
+    </blockquote>
+    <figcaption>CurlyByte<cite title="Source Title">Insurance</cite></figcaption>  
+</figure>
 {% endblock %}
    

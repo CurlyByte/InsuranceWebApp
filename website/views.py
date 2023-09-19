@@ -8,7 +8,11 @@ from .auth import InsuranceForm, UpdateForm, SelectInsuranceForm
 # Creating a blueprint to usi it in __init__.py
 views = Blueprint('views',__name__)
 
-@views.route('/', methods =['GET','POST'])
+@views.route('/', methods = ['GET','POST'])
+def home_page():
+    return render_template("home.html", user=current_user)
+
+@views.route('/my_account', methods =['GET','POST'])
 @login_required
 def home():
     user_table = User.query.filter_by(id=current_user.id).first()
