@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}User Insurances{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>User Information</h1>
+    <p>User: {{ user.name }} {{ user.surname }}</p>
+
+    {% if user_insurances %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Insurance Name</th>
+                <th>Amount</th>
+                <th>Creation Date</th>
+                <th>Expiration Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for insurance in user_insurances %}
+            <tr>
+                <td>{{ insurance.insurance_name }}</td>
+                <td>{{ insurance.amount }}</td>
+                <td>{{ insurance.creation_date }}</td>
+                <td>{{ insurance.expiration_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No insurances found for this user.</p>
+    {% endif %}
+</div>
+{% endblock %}
+

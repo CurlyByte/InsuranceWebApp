@@ -1,0 +1,6 @@
+body{
+    background-image: url('/website/static/images/landscape.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+

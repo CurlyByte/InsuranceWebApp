@@ -1,0 +1,29 @@
+<!-- user_insurances.html -->
+
+{% extends "base.html" %}
+{% block title %}User Insurances{% endblock %}
+{% block content %}
+<h1>Insurance Statistics</h1>
+<p>Total Users: {{ num_users }}</p>
+<p>Total Insurances: {{ num_insurances }}</p>
+<table>
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Insurance Name</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user, user_insurances in user_insurance_pairs %}
+            {% for insurance in user_insurances %}
+                <tr>
+                    <td>{{ user.name }} {{ user.surname }}</td>
+                    <td>{{ insurance.insurance_name }}</td>
+                    <td>{{ insurance.amount }}</td>
+                </tr>
+            {% endfor %}
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

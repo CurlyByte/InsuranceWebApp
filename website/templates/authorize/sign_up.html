@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %} 
+{% block content %}
+<br/>
+<form method="POST">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      {{ form.hidden_tag() }}
+      {{ form.name.label   }}
+
+      {{ form.name (class="form-control", placeholder = "Name...")  }}
+    </div>
+    <div class="form-group col-md-4">
+      {{ form.surname.label   }}
+      {{ form.surname (class="form-control", placeholder = "Surname...")  }}
+    </div>
+    <div class="form-group col-md-4">
+      {{ form.email.label}}
+      {{ form.email (class="form-control", placeholder="Email...")}}
+    </div>
+    <div class="form-group col-md-4">
+      {{ form.password_1.label}}
+      {{ form.password_1 (class="form-control", placeholder="Password...") }} 
+    </div>
+  </div>
+  <div class="form-group col-md-4">
+      {{ form.password_2.label}}
+      {{ form.password_2 (class="form-control", placeholder="Confirm password...") }}
+  </div>
+  <div class="form-group col-md-4">
+      {{ form.phone.label}}
+      {{ form.phone (class="form-control", placeholder="Phone number...") }}
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      {{ form.address.label}}
+      {{ form.address (class="form-control", placeholder="Address...") }}
+    </div>
+    <div class="form-group col-md-4">
+      {{ form.city.label}}
+      {{ form.city (class="form-control", placeholder="City...") }}
+    </div>
+    <div class="form-group col-md-4">
+      {{ form.postal_code.label}}
+      {{ form.postal_code (class="form-control", placeholder="Postal code...") }}
+    </div>
+  </div>
+  <br/>
+  {{ form.submit (class="btn btn-primary") }}
+  
+</form>
+{% endblock %}
