@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}Update User{% endblock %} 
+{% block content %}
+<div class="container">
+<form action="/update/{{update_value.id }}" method="POST">
+    <br/><br/>
+    ID to update: {{ id }}
+    Current ID: {{ current_user.id }}
+    <br/><br/>
+  {{ form.hidden_tag() }}
+  {{ form.name.label  }}
+  {{ form.name(value=update_value.name) }}
+  <br/><!--creating a form to get data to register, using bootstrap div class form-group and also form-control-->
+  {{ form.surname.label(class="form-label")}}
+  {{ form.surname(value=update_value.surname)  }}
+  <br/>
+  {{ form.email.label(class="form-label")}}
+  {{ form.email (value=update_value.email)}}
+  <br/>
+  {{ form.phone.label(class="form-label")}}
+  {{ form.phone(value=update_value.phone) }}
+  <br/>
+  {{ form.address.label(class="form-label")}}
+  {{ form.address(class="form-control",value=update_value.address) }}
+  <br/>
+  {{ form.city.label(class="form-label")}}
+  {{ form.city(class="form-control",value=update_value.city) }}
+  <br/>
+  {{ form.postal_code.label(class="form-label")}}
+  {{ form.postal_code(class="form-control",value=update_value.postal_code) }}
+  <br/>
+  {{ form.submit }}
+</form>
+</div>
+You re not allowed to view this page!
+
+
+{% endblock %}
+
