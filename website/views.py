@@ -14,6 +14,14 @@ def home():
     user_table = User.query.filter_by(id=current_user.id).first()
     return render_template("user_info.html", user = current_user, table = user_table)
 
+@views.route('/', methods =['GET','POST'])
+@login_required
+def home():
+    user_table = User.query.filter_by(id=current_user.id).first()
+    return render_template("user_info.html", user = current_user, table = user_table)
+
+
+
 # Creating a route to admin page, wher you can do admin stuff
 @views.route('/admin', methods = ['GET','POST'])
 @login_required
