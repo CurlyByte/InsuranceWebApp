@@ -4,6 +4,17 @@
 
 {% endblock %}
 {% block body %}
+<style type="text/css">
+    body {
+        background-image: url("{{ url_for('static', filename='images/landscape.jpg') }}");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: #fff;
+    }
+    
+</style>
 <blockquote class="pull-right">
     <p>"All your life will be like a mountain for us,<br/> solid,<br/> rocky,<br/> BIG ..."<p>
     <br/>

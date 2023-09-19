@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c6f15138-3cc0-4ca9-bc31-fd8529f25ed5" name="Changes" comment="First commit of my work">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/PycharmProjects.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/CurlyByte.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Django_first_project/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Django_first_project/.idea/Django_first_project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Django_first_project/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Django_first_project/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Django_first_project/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Django_first_project/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/.idea/FlaskProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/create_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/databaze.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/error_handlers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/galerie/galerie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/galerie/templates/galerie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/login/login.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/login/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/registrace/registrace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/registrace/templates/registrace.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/bootstrap-5.3.1-dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/sad_panda.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/static/uploads/panda.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlaskProject/root/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITNetwork/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITNetwork/.idea/ITNetwork.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITNetwork/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITNetwork/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITNetwork/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITNetwork/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/.idea/TimFlask.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/instance/users.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/panda/static/images/panda.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/templates/user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlask/templates/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TimFlaskStatic/static/images/panda.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/.idea/main-4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/create_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/databaze.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/error_handlers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/galerie/galerie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/galerie/templates/galerie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/login/login.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/login/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/registrace/registrace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/registrace/templates/registrace.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/bootstrap-4.1.3-dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/sad_panda.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/static/uploads/panda.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../main-4/root/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/.idea/pythonProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject1/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject1/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject1/.idea/pythonProject1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProject1/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProjectFlask/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProjectFlask/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProjectFlask/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProjectFlask/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProjectFlask/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProjectFlask/.idea/pythonProjectFlask.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProjectFlask/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProjectFlask/Flask.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProjectFlask/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pythonProjectFlask/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../školení/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../školení/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../školení/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../školení/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../školení/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../školení/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../školení/.idea/školení.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../školení/OOP" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2VCNB0SfQv1ph6PqP8CPB3schTJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rotrau&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CurlyByte" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6f15138-3cc0-4ca9-bc31-fd8529f25ed5" name="Changes" comment="" />
+      <created>1694335962687</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694335962687</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First commit of my work">
+      <created>1694336356986</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694336356986</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First commit of my work">
+      <created>1694336504546</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694336504546</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit of my work" />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit of my work" />
+  </component>
+</project>

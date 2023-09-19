@@ -1,2 +1,2 @@
 # CurlyByte
- website using flask with db
+InsuranceWebApp project for ITNetwork
