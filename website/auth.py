@@ -1,4 +1,4 @@
-from flask import Blueprint,render_template, flash, redirect, url_for
+from flask import Blueprint,render_template, flash, redirect, url_for, request
 from .models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
@@ -124,12 +124,12 @@ def admin_signup():
         if admin:
             flash("Username already exists!", category='error')
         else:
-            new_admin=User(name=username,password=generate_password_hash(password, method='sha256'))
+            new_admin=User(id=1,name=username,password=generate_password_hash(password, method='sha256'))
             db.session.add(new_admin)
             db.session.commit()
             login_user(new_admin, remember=True)
             flash("Admin created!",category='success')
-            return redirect(url_for('views.admin'))
+            return redirect(url_for('views.home_page'))
         
     return render_template("admin/sign_up_admin.html", form=form, admin=current_user)
 

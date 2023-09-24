@@ -1,19 +1,42 @@
 {% extends "base.html" %} {% block title %}Home Page{% endblock %} {% block body
 %}
-<div class="container">
+<div class="container ">
   <br />
-  <h1>Welcome to Insurance Web App</h1>
+  <h1 class="text-center">Welcome to Insurance Web App!</h1>
   <br />
-  <p>
-    In this web app you can create accounts for users and edit their data with
-    Admin account( updating data, editing them or creating insurances )
+
+<dl class="row">
+  <dt class="col-sm-3">InsuranceWebApp Project:</dt>
+  <dd class="col-sm-9">
+    This project was created based on the assignment of a Python course. 
+    As an extended project task, I programmed a web application that serves to create user accounts and admin account. 
+    Through Admin I can then create, add insurance for individual users and browse their data. </dd>
+
+  <dt class="col-sm-3">Programming Stack:</dt>
+  <dd class="col-sm-9">
+    - The website was built using Flask - a Python web framework.<br/>
+    - SQLAlchemy with an SQLite database are used for data management.<br/>
+    - Development and coding were done in VS Code.<br/>
+    - Git is used for version control.
+    - Bootstrap for making web more user-friendly.
+  </dd>
+
+  <dt class="col-sm-3">Deployment Environment:</dt>
+  <dd class="col-sm-9">- The website is currently running on Linode (VPS) with Ubuntu as its OS.<br/> - Nginx is configured as webserver and the Flask app is managed by the Gunicorn.<br/></dd>
+
+  <dt class="col-sm-3 text-truncate">Security Measures</dt>
+  <dd class="col-sm-9">- Passwords are securely stored using hash functions. <br/>- User roles -> admin and user have separated permission to ensure that users can't view and modify others accounts.
+  <br/> - Certbot is used for encrypting website with SSL/TLS certificate to ensure that web traffic is encrypted and secure.
+</dd>
+  </dd>
+</dl>
+
   </p>
   {% if admin_exists %}
   <br />
   <p>
-    Admin already created, please <a href="/admin_user">log in as Admin</a> to
-    modify Users data
-  </p>
+    Admin account is already created from previous session please <a href="/admin_user">log in as Admin</a> (Username: admin, Password: admin) to
+    modify users data. Or you can login or create a new users via navbar. </p>
   {% else %}
   <a href="/admin_sign_up">Create Admin</a>
   {% endif %}
