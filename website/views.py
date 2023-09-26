@@ -6,10 +6,14 @@ from .auth import UpdateForm, SelectInsuranceForm
 
 views = Blueprint('views',__name__)
 
-@views.route('/', methods = ['GET','POST'])
+@views.route('/home', methods = ['GET','POST'])
 def home_page():
     admin_exists = User.query.filter_by(id=1).first()
     return render_template("home.html", admin_exists=admin_exists)
+
+@views.route('/', methods = ['GET','POST'])
+def about_me():
+    return render_template("about_me.html")
 
 # Creating a route to admin page, wher you can do admin stuff
 @views.route('/admin', methods = ['GET','POST'])

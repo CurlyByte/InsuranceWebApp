@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Webová stránka pro prezentaci mého osobního portfolia" />
+        <meta name="author" content="Dominik Šavrda aka CurlyByte" />
+        <title>Dominik Šavrda - Portfolio</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/1f84fc706e.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+   
+        <link href="{{ url_for('static',filename='style_about_me.css') }}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Dominik Šavrda</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{{ url_for('static',filename='images/Profile.jpg') }}" alt="profilová fotka" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">O mně</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Zkušenosti</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Znalosti</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Vzdělání</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Zájmy</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#project">Projekt</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Dominik
+                        <span class="text-primary">Šavrda</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Praha · 731 588 583 ·
+                        <a href="mailto:dominik.sav@gmail.com">dominik.sav@gmail.com</a>
+                    </div>
+                    <p class="lead mb-5"> Od dětství mě fascinoval svět výpočetní techniky, což mě později přivedlo až k pracovní pozici, kde jsem zajišťoval servis počítačů. 
+                        Postupem času jsem se vypracoval až na pozici vedoucího týmu oddělení,
+                        které zajišťuje stavbu a servis PC sestav pro zákazníky, a to od kancelářských PC až po výkonné herní sestavy. Nicméně, vždy jsem měl touhu prohloubit své znalosti 
+                        a poznání o fungování informačních technologií. Díky okolnostem jsem následně dostal příležitost udělat si ve svém profesním životě krátkou pauzu a zúčastnit se
+                        kurzu zaměřeného na programování webových aplikací. Jelikož jsem odjakživa miloval humor Montyho Pythona, tak moje volba byla jasná a to programování v jazyce Python, který mě
+                        okouzlil svojí jednoduchostí a širokým spektrem možností, které nabízí.</br>  Co mě naplňuje nejvíce, je možnost po úspěšném dokončení tohoto kurzu konečně začít tvořit něco skutečného. 
+                        Radost učit se stále něčemu novému mi nyní díky znalostem z programování naskýtá neomezené možnosti. V kombinaci s mými dosavadními
+                        pracovními zkušenostmi jsem přesvědčen, že tyto nabyté dovednosti a znalosti dokážu zužitkovat a implementovat je do zavedených procesů či tvoření nových.</p>
+                    <div class="social-icons">
+                        <a class="social-icon" target="_blank" href="https://www.linkedin.com/in/dominik-šavrda-9566419a/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" target="_blank" href="https://github.com/CurlyByte"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" target="_blank" href="https://www.facebook.com/edna.beerhunter"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Zkušenosti</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Rekvalifikační kurz Programátor WWW aplikací Python</h3>
+                            <div class="subheading mb-3">IT akademie - ITnetwork s.r.o.</div>
+                            <p>Kurz zahrnoval základy programování v Pythonu, objektově orientovaného programování OOP, práci s kolekcemi dat, webdesign HTML/CSS, databází SQL, a verzování kódu.
+                                Jako závěrečný projekt jsem vytvořil webovou aplikaci ve frameworku Flask pro vytváření a správu pojištění a pojištěnců. Úspěšné zakončení zkouškou a odevzdáním projektu</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">07 - 09/2023</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Team Leader – Stavby Alza PC</h3>
+                            <div class="subheading mb-3">Alza.cz</div>
+                            <p>Vedení 20 členného týmu, který kompletuje, servisuje PC a notebooky zn. Alza (roční produkce přes 4 tisíce PC). Kompletní dohled nad realizací sestavování, reklamací a rekultivací skladových a individuálních sestav. Nastavování KPIs a provozních procesů, vedení pravidelných porad, předávání zpětných vazeb a motivování týmu. Vyhodnocování pracovních výkonů, tvorba mezd, nábor nových zaměstnanců, školení týmu a přispívání články do Alza Wiki. Řešení kritických situací spojených s každoročním sezónním náporem a dalších mimořádných událostí (covid, nedostatek PC čipů apod.).Práce s MySQL a 
+                                Opakované ocenění zaměstnanec měsíce</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">01/2021 - 03/2023</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Servisní technik Alza PC</h3>
+                            <div class="subheading mb-3">Alza.cz</div>
+                            <p>Servis PC zn. Alza, diagnostika a oprava počítačů, komunikace se zákazníky, administrativní řešení reklamací. Postupné přebírání nových kompetencí v rámci týmu a zastupování vedoucího.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">08/2016 - 12/2021</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Technik - První spuštění</h3>
+                            <div class="subheading mb-3">Alza.cz</div>
+                            <p>IT support pro zákazníky – instalace SW/HW do PC/NTB, edukace zákazníků. Koutek prvního spuštění se nacházel na frekventovaném holešovickém showroomu.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">08/2014 - 07 2016</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-3">Znalosti</h2>
+                    <h3 class="mb-2">Hard Skills</h3>
+                    <div class="subheading mb-3">Python</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Základy syntaxe a struktury jazyka
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Objektově orientované programování (OOP)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Webový framework Flask, použití knihoven např. SQLAlchemy k prpojení s databází
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Nasazení aplikace na linuxový VPS a zpřístupnění zkrs doménu.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Vytvoření jednoduché konzolové kalkulačky až po responzivní webovou aplikaci ve Flasku
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Verzování projektu v Gitu
+                        </li>
+                    </ul>
+                </br>
+                    <div class="subheading mb-3">SQLite</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            CRUD operace
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Používání vnořených poddotazů SELECT
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Vytváření triggerů k automatizaci úkonů v databázi
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Organizování vztahů mezi daty jednotlivých tabulek
+                        </li>
+
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Propojení databáze s webovým frameworkem k umožnění webových aplikací ukládat a získávat data z databáze.
+                        </li>
+                    </ul>
+                </br>
+                        <div class="subheading mb-3">HTML/CSS</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            HTML znalosti včetně správné struktury dokumentů
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Znalost CSS pro stylizaci 
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Vytváření responzivního designu a použití frameworku Bootstrap
+                        </li>
+                    </ul>
+                </br>
+                    <div class="subheading mb-3">Ostatní</div>
+                    <ul class="fa-ul mb-0">
+
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Excel - užití funkcí kontingenčních tabulek, Asana
+                        </li>
+
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Znalost HW/SW, diagnostika a oprava PC/NTB, technologií/trendů v IT, OS (Windows/Mac/ základy Linuxu, terminálu)
+                        </li>
+
+                        <li>
+                            <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                            Anglický jazyk - B2, italský jazyk - A2, řidičský průkaz sk. B
+                        </li>
+                    </ul>
+                </br>
+                    <h3 class="mb-3">Soft Skills</h3>
+                        <ul class="fa-ul mb-2">
+                            <li>
+                                <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                                Učenlivost, rychlá adaptace novým nástrojům, postupům. Zodpovědnost, spolehlivost.
+                            </li>
+    
+                            <li>
+                                <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                                Organizační schopnosti, kritické mysšlení, sebedisciplína. 
+                            </li>
+    
+                            <li>
+                                <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                                Dobré komunikační a prezentační schopnosti, práce pod tlakem a řešení krizových situací.
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fa-regular fa-circle fa-2xs"></i></span>
+                                Schopnost efektivně vést a motivovat tým. 
+                            </li>
+                        </ul>
+                    </div>
+            </section>
+            <hr class="m-0" />
+
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Certifikace</h2>
+                    <ul class="fa-ul mb-5">
+                        <li>
+                            <span class="fa-li"><i class="fa-solid fa-stamp"></i></span>
+                            <a href="https://www.itnetwork.cz/certifikat/eyJjb3Vyc2VJZCI6MTYxNywibWVtYmVySWQiOjExMzY3MH0=" target="_blank">ITnetwork HTML/CSS</a>
+                        </li>
+                       <li>
+                            <span class="fa-li"><i class="fa-solid fa-stamp"></i></span>
+                            <a href="https://www.itnetwork.cz/certifikat/eyJjb3Vyc2VJZCI6NDgwMSwibWVtYmVySWQiOjExMzY3MH0=" target="_blank">ITnetwork Python basics</a>                        </li>
+                       </li>
+                       <li>
+                        <span class="fa-li"><i class="fa-solid fa-stamp"></i></span>
+                        <a href="https://www.itnetwork.cz/certifikat/eyJjb3Vyc2VJZCI6NTA4NiwibWVtYmVySWQiOjExMzY3MH0=" target="_blank">ITnetwork Python OOP</a>                        </li>
+                   </li>
+                        <li>
+                            <span class="fa-li"><i class="fa-solid fa-stamp"></i></span>
+                            <a href="https://www.itnetwork.cz/certifikat/eyJjb3Vyc2VJZCI6NDgwMiwibWVtYmVySWQiOjExMzY3MH0=" target="_blank">ITnetwork Python kolekce</a>                        </li>
+                       </li>
+                       <li>
+                        <span class="fa-li"><i class="fa-solid fa-stamp"></i></span>
+                        <a href="https://www.itnetwork.cz/certifikat/eyJjb3Vyc2VJZCI6ODA3NSwibWVtYmVySWQiOjExMzY3MH0=" target="_blank">ITnetwork SQLite</a>                        </li>
+                   </li>
+                </ul>
+                
+                    <h2 class="mb-3">Vzdělání</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Ekologické gymnázium v Praze</h3>
+                            <div>Zakončení maturitní zkouškou</div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2010 - 2011</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Česko-italské jazykové gymnázium v Praze</h3>
+                            <div>Vícejazyčné gymnázium se zaměřením na italský jazyk.</div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2004-2010</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Zájmy</h2>
+                    <p>Kromě aktuální záliby v kódování, rád také trávím čas s rodinou, nad četbou dobré knihy či poslechu kvalitní hudby. Rád se otužuji a běhám v přírodě. Když mám časové možnosti tak také rád relaxuji tvořením maleb pomocí akvarelu.</p>
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="project">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Projekt</h2>
+                    <h3 style="text-transform: none;"> <a href="/home" target="_blank">InsuranceWebApp</a> </h3> 
+                   
+                            <p>V rámci závěrečného projektu Python kurzu jsem vytvořil webovou aplikaci, která slouží k vytváření uživatelských účtů a jejich správu pomocí Admin účtu. Následně je v ní možno k jednotlivým uživatelům přidávat různé pojištění.</p>
+                            <p>Webová aplikace byla postavena pomocí Flasku a dalších knihoven. Je v ní možno vytvářet účty, přidávat jednotlivé "pojištění" k účtům, uživatelé i pojištění jsou ukládány do databáze. Aplikace je následně úspěšně nasazená na linuxovým serveru a přístupná přes mojí doménu <a href="https://curlybyte.cz">curlybyte.cz</a> </p>
+                            <p>Díky práci na tomto projektu jsem měl konečně možnost vyzkoušet nabyté znalosti a zároveň to byla jedna velká cesta plná učení a nalézání nových postupů. Kolikrát byl jeden problém vyřešen, tak vyvstaly další tři. 
+                            Občas jsem se dostával i k lehké frustraci, když jsem zjistil, že projekt potřebuji celý "překopat". Největším poučením pro mě bylo, když jsem si uvědomil, že je potřeba si nejdříve udělat solidní základ a až poté dodávat následné featury. Původně jsem měl rozpracovaných několik funkcí najednou, a nakonec jsem to musel ořezat, jelikož nebylo v mých časových možnostech vše do konce odevzdání projektu realizovat.  </p>
+                            <p>Více informací přímo v <a href="/home" target="_blank">projektu</a>.</br> Niže je odkaz na zdrojový kód.</p>
+                            <div class="social-icons">
+                            <a class="social-icon" target="_blank" href="https://github.com/CurlyByte/InsuranceWebApp"><i class="fab fa-github"></i></a>
+                        </div>
+                    </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ url_for('static',filename='scripts.js') }}"></script>
+    </body>
+</html>

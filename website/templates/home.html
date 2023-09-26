@@ -1,5 +1,5 @@
-{% extends "base.html" %} {% block title %}Home Page{% endblock %} {% block body
-%}
+{% extends "base.html" %} {% block title %}Home Page{% endblock %} 
+{% block body%}
 <div class="container ">
   <br />
   <h1 class="text-center">Welcome to Insurance Web App!</h1>
@@ -36,7 +36,7 @@
   <br />
   <p>
     Admin account is already created from previous session please <a href="/admin_user">log in as Admin</a> (Username: admin, Password: admin) to
-    modify users data. Or you can login or create a new users via navbar. </p>
+    modify users data. Or you can create new standard users via navbar and login. </p>
   {% else %}
   <a href="/admin_sign_up">Create Admin</a>
   {% endif %}

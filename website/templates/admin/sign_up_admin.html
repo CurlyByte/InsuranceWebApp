@@ -1,5 +1,7 @@
 {% extends "base.html" %} {% block title %}Admin Register{% endblock %} 
 {% block body %}
+<div class="container-fluid">
+
 <div class="form-row">
   <div class="form-group col-md-4">
     {{ form.hidden_tag() }}
@@ -17,7 +19,9 @@
   </div>
 </div>
 </br>
+
 {{ form.submit (class="btn btn-primary") }}
+</div>
 {% endblock %}
 
   
