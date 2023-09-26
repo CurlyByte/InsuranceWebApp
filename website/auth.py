@@ -19,7 +19,7 @@ class AdminForm(FlaskForm):
 class AdminSignUpForm(FlaskForm):
     name = StringField("Username", validators=[DataRequired(), Length(min=2)])
     password_1 = PasswordField('Password', validators=[DataRequired()])
-    password_2 = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password_1')])
+    password_2 = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password_1', message="Password must match!")])
     submit= SubmitField("Create Admin")
 
 class LogForm(FlaskForm):
@@ -32,9 +32,11 @@ class SignUpForm(FlaskForm):
     surname = StringField("Surname",validators=[DataRequired(), Length(min=2)])
     email = EmailField("Email",validators=[DataRequired(), Email()])
     password_1 = PasswordField('Password', validators=[DataRequired(), Length(min=8)])
-    password_2 = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password_1')])
+    password_2 = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password_1', message="Password must match!")])
     address = StringField("Address", validators=[DataRequired()])
     submit = SubmitField("Create Account")
+
+
 
 class UpdateForm(FlaskForm):
     name = StringField("Name", validators=[DataRequired(), Length(min=2)])
@@ -95,7 +97,7 @@ def login():
             if check_password_hash(user.password, password):
                 flash('Logged in successfully',category='success')
                 login_user(user, remember=False)
-                return redirect(url_for('views.home'))
+                return redirect(url_for('views.my_account'))
             else:
                 flash('Incorrect password, try again', category='error')
         else:

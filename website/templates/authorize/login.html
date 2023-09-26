@@ -1,20 +1,18 @@
 {% extends "base.html" %}
 {% block title %}Login Page!{% endblock %}
-{% block body %}
-<div class="container-fluid">
-
+{% block content %}
 <br/>
 <h3>User login</h3>
 <br/>
-<form method="POST">
+<form method="POST" >
     <div class="form-group">
         {{ loginform.hidden_tag() }}
         {{ loginform.email.label }}   
-        {{ loginform.email (class="form-control", placeholder="Enter email...")}}
+        {{ loginform.email (class="form-control card bg-light")}}
     </div>
     <div class="form-group">
         {{ loginform.password.label }}        
-        {{ loginform.password (class="form-control", placeholder="Enter password...") }}
+        {{ loginform.password (class="form-control card bg-light") }}
     </div>
     <br/>
     {{ loginform.submit (class="btn btn-primary")}} 

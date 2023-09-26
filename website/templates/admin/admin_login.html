@@ -1,21 +1,18 @@
 {% extends "base.html" %} {% block title %}Admin Login{% endblock %} {% block
-body %}
-<div class="container-fluid">
-
+content %}
 <br />
 <h3>Admin login</h3>
 <br />
 <form method="POST">
   <div class="form-group">
     {{ loginform.hidden_tag() }} {{ loginform.name.label }} {{ loginform.name
-    (class="form-control", placeholder="Enter name...") }}
+    (class="form-control card bg-light") }}
   </div>
   <div class="form-group">
-    {{ loginform.password.label }} {{ loginform.password (class="form-control",
-    placeholder="Enter password...") }}
+    {{ loginform.password.label }} {{ loginform.password (class="form-control card bg-light") }}
   </div>
   <br />
   {{ loginform.submit (class="btn btn-primary")}}
 </form>
-</div>
+
 {% endblock %}
