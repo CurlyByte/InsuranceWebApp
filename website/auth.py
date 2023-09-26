@@ -95,7 +95,7 @@ def login():
             if check_password_hash(user.password, password):
                 flash('Logged in successfully',category='success')
                 login_user(user, remember=False)
-                return redirect(url_for('views.home_page'))
+                return redirect(url_for('views.home'))
             else:
                 flash('Incorrect password, try again', category='error')
         else:
@@ -122,9 +122,9 @@ def admin_signup():
         admin = User.query.filter_by(name=username).first()
         
         if admin:
-            flash("Username already exists!", category='error')
+            flash("Admin already exists!", category='error')
         else:
-            new_admin=User(id=1,name=username,password=generate_password_hash(password, method='sha256'))
+            new_admin=User(name=username,password=generate_password_hash(password, method='sha256'))
             db.session.add(new_admin)
             db.session.commit()
             login_user(new_admin, remember=True)
