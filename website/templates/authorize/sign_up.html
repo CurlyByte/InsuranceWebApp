@@ -1,15 +1,12 @@
 {% extends "base.html" %} {% block title %}Sign Up{% endblock %} 
 {% block content %}
-<div class="container-fluid">
-<br/>
+<br/><br/>
 <h3>Create Account</h3>
 <br/>
-
 <form method="POST">
   <div class="form-group">
       {{ form.hidden_tag() }}
       {{ form.name.label   }}
-
       {{ form.name (class="form-control card bg-light")  }}
     </div>
     <div class="form-group">
@@ -24,25 +21,22 @@
       {{ form.password_1.label}}
       {{ form.password_1 (class="form-control card bg-light") }} 
     </div>
-  </div>
-  <div class="form-group">
+    <div class="form-group">
       {{ form.password_2.label}}
       {{ form.password_2 (class="form-control card bg-light") }}
       {% for error in form.password_2.errors %}
-      <div class="alert-danger">
+      <spam class="alert-danger">
         {{ error }}
-      {% endfor %}
-        </div>
-  <div class="form-row">
+        {% endfor %}
+      </span>
+  </div>
     <div class="form-group">
       {{ form.address.label}}
       {{ form.address (class="form-control card bg-light") }}
     </div>
-  </div>
-  <br/>
+  </br/>
   {{ form.submit (class="btn btn-primary") }}
-  
 </form>
 </div>
-</div>
+
 {% endblock %}
