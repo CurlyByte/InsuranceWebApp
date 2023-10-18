@@ -1,0 +1,13 @@
+Ceníme práci na projektu! 🏆 Prohlédli jsme si kód a máme k němu následující poznámky:
+
+1. Pojmenování identifikátorů - ok
+2. Dodržení principů SRP a SoC - ok
+3. Vhodný výběr datových typů - vypadl věk, takže jsou to jen stringy a datum. Nerozumím tabulce insurance_user, jako že by k jedné instanci pojištění (včetně částky a datumů) mohlo být přiřazeno více uživatelů? Jinak použití M:N nedává smysl.
+4. Formátování kódu - ok
+5. Duplicitní kód a nekonečné cykly - ok
+6. Validace vstupních dat - framework
+7. Logičnost a složitost - je ve flasku jediná možnost mít obsluhu formulářů ve view, když by to normálně spadalo do modelu? A 404 při nenalezení záznamu?
+8. Komentáře - zřídka
+9. Celkové hodnocení - jednoduchá flask appka, bude fajn, pokud se bude dále rozvíjet a vyzkoušíš si na tom další vlastnosti frameworku
+
+Doporučujeme případné výtky v kódu opravit, abyste jej mohli pak prezentovat budoucímu zaměstnavateli v co nejlepší kvalitě. Pokud byste potřebovali s čímkoli pomoci, naplánujte si s námi konzultaci, rádi vám poradíme!
