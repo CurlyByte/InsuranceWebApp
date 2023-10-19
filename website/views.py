@@ -4,13 +4,15 @@ from .models import User, Insurance
 from . import db
 from .auth import UpdateForm, SelectInsuranceForm
 
-views = Blueprint('views',__name__)
 
-@views.route('/home', methods = ['GET','POST'])
+views = Blueprint('views',__name__)
+#Routes to the project home, also it checks if there is already admin created and passes the argument to home.html
+@views.route('/project', methods = ['GET','POST'])
 def home_page():
     admin_exists = User.query.filter_by(id=1).first()
     return render_template("home.html", admin_exists=admin_exists)
 
+#routes to the about me page, which is not part to git repository
 @views.route('/', methods = ['GET','POST'])
 def about_me():
     return render_template("about_me.html")
@@ -26,6 +28,7 @@ def admin():
         flash("You are not authorized to view this page! Please login as Admin", category='error')
         return redirect(url_for('auth.admin_login'))
 
+#passes id number of the user 
 @views.route('/delete/<int:id>')
 @login_required 
 def delete_user(id):
@@ -60,7 +63,7 @@ def statistics(id):
             return render_template('statistics.html',id=id,user=user,user_insurances=user_insurances)
         else:
             flash("Error",category="error")
-        return redirect(url_for('views.home'))
+        return redirect(url_for('views.project'))
     else:
         flash("You are not authorized to view this page! Please login as Admin", category='error')
         return redirect(url_for('auth.admin_login'))

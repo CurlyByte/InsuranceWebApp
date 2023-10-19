@@ -3,7 +3,7 @@ from . import db
 from flask_login import UserMixin
 from datetime import datetime
 """installed pip flask-login so i can define scheme for tables"""
-"""creating table wit user, id as primary key, email, """
+"""creating table with user, id as primary key, email, """
 
 class Insurance(db.Model):
     id = db.Column(db.Integer, primary_key=True)

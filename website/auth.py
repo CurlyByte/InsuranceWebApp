@@ -1,5 +1,5 @@
-from flask import Blueprint,render_template, flash, redirect, url_for, request
-from .models import User
+from flask import Blueprint,render_template, flash, redirect, url_for
+from models import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 from flask_wtf import FlaskForm
@@ -35,8 +35,6 @@ class SignUpForm(FlaskForm):
     password_2 = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password_1', message="Password must match!")])
     address = StringField("Address", validators=[DataRequired()])
     submit = SubmitField("Create Account")
-
-
 
 class UpdateForm(FlaskForm):
     name = StringField("Name", validators=[DataRequired(), Length(min=2)])
@@ -83,7 +81,7 @@ def admin_login():
     return render_template("admin/admin_login.html", user=current_user, loginform = loginform)
 
 
-#"""Creating a route with methods so it can be used from login html"""
+"""Creating a route with methods so it can be used from login html"""
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
     loginform = LogForm()
